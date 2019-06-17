@@ -114,6 +114,14 @@
 					display_number_of_days();
 			},10);
 			
+			setTimeout(function(){
+				if (document.location.href.indexOf("?date=") >= 0) {
+					SelectDate = document.location.href.split("?date=")[1].split("-");
+					dropdown_month(false, SelectDate[1]);
+					dropdown_day(false, SelectDate[0]);
+				}
+			}, 1000)
+			
 		</script>
 		
 	</head>
